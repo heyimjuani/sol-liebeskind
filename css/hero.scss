@@ -4,4 +4,31 @@
   background: url(../images/sol.jpg) no-repeat right $bg;
   background-size: auto 100%;
   float: left;
+  @include display-flex;
+  @include flex-props(row nowrap, flex-start, flex-start, center);
+
+  article {
+    text-align: center;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    padding: 0 50px;
+    
+    img {
+      pointer-events: none;
+    }
+    p {
+      padding: 12px 0;
+      color: $body-light;
+
+      &:after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 125px;
+        background: $body-light;
+        margin: 15px auto 0;
+        opacity: .5;
+      }
+    }
+  }
 }

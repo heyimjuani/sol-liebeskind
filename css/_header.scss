@@ -44,6 +44,21 @@ header {
   flex: 1 auto;
   height: 50px;
   position: relative;
+  padding: 12px 0 0 11px;
+
+  .time {
+    float: left;
+    color: $body-lighter;
+  }
+
+  .fa-soundcloud {
+    float: right;
+    color: $body-lighter;
+    text-decoration: none;
+    &:hover {
+      color: $body;
+    }
+  }
 }
 
 #progress {
@@ -73,6 +88,30 @@ header {
   li {
     list-style: none;
     display: inline-block;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 0 1px;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: border .15s ease-in-out;
+
+    &#mute {
+      position: absolute;
+      top: 0;
+      right: 11px;
+    }
+    &:hover { border-bottom: 2px solid $body; }
+
+    a {
+      display: block;
+      width: 28px;
+      padding: 4px 0 0 0;
+      height: 40px;
+      line-height: 40px;
+      text-decoration: none;
+      color: $body;
+    }
   }
   
   &:after {
