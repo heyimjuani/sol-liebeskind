@@ -1,0 +1,24 @@
+$bg: #ededed;
+$body: #504f4a;
+$body-light: #96958f;
+$cta: #bbb380;
+$accent: #9d735a;
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+	-webkit-font-smoothing: antialiased;
+	color: #5b5b5f;
+  padding-top: 50px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}

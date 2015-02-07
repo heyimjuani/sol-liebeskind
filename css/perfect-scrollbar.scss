@@ -1,0 +1,69 @@
+// Helper mixins
+@mixin opacity($o) {
+  $IEValue: $o * 100;
+  opacity: $o;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+      filter: alpha(opacity=$IEValue);
+}
+
+@mixin border-radius($r) {
+  -webkit-border-radius: $r;
+     -moz-border-radius: $r;
+      -ms-border-radius: $r;
+          border-radius: $r;
+}
+
+@mixin transition($t...) {
+  -webkit-transition: $t;
+     -moz-transition: $t;
+       -o-transition: $t;
+          transition: $t;
+}
+
+// Scrollbar mixins
+@mixin scrollbar-rail-default {
+  display: none;
+  position: absolute; /* please don't change 'position' */
+  @include opacity(0);
+  @include transition(background-color .2s linear, opacity .2s linear);
+}
+
+@mixin scrollbar-default {
+  position: absolute; /* please don't change 'position' */
+  background-color: $body;
+  @include transition(background-color .2s linear);
+}
+
+.ps-container {
+  &.ps-active-y > .ps-scrollbar-y-rail {
+    display: block;
+  }
+
+  >.ps-scrollbar-y-rail {
+    @include scrollbar-rail-default;
+    right: 11px; /* there must be 'right' for ps-scrollbar-y-rail */
+    width: 4px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background: $body-light;
+      left: 1px;
+      top: 0;
+      z-index: 1;
+      opacity: .25;
+    }
+
+    >.ps-scrollbar-y {
+      @include scrollbar-default;
+      right: 0; /* there must be 'right' for ps-scrollbar-y */
+      width: 4px;
+      z-index: 2;
+    }
+  }
+}
+.always-visible.ps-container > .ps-scrollbar-y-rail {
+  opacity: 1;
+}

@@ -1,0 +1,88 @@
+header {
+  position: fixed;
+  height: 50px;
+  background: #fff;
+  width: 100%;
+  top: 0;
+  left: 0;
+  @include display-flex;
+  @include flex-props(row nowrap, space-between, center, center);
+
+  nav {
+    height: 50px;
+    background: $body;
+    font-family: "FontAwesome";
+
+    ul {
+      &:after {
+        content: "";
+        clear: both;
+        display: block;
+        height: 0;
+        width: 0;
+      }
+      li {
+        list-style: none;
+        float: left;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        width: 65px;
+        text-align: center;
+
+        &:hover { background: rgba(0,0,0,.1); }
+      }
+    }
+  }
+}
+
+#player {
+  flex: 1 auto;
+  height: 50px;
+  position: relative;
+}
+
+#progress {
+  display: block;
+  height: 2px;
+  background: lighten($body, 60%);
+  position: absolute;
+  left: 11px;
+  right: 0px;
+  bottom: 8px;
+  .progress-bar {
+    width: 40%;
+    height: 2px;
+    display: block;
+    background: $accent;
+  }
+}
+
+#controls {
+  padding: 0 10px 0 0;
+  position: relative;
+  width: 340px;
+  padding: 0 8px;
+  text-align: center;
+  height: 50px;
+
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: lighten($body, 60%);
+    position: absolute;
+    bottom: 8px;
+    left: 11px;
+    right: 11px;
+  }
+}

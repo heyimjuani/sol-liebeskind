@@ -1,0 +1,7 @@
+#hero {
+  width: calc(100% - 340px);
+  height: calc(100vh - 50px);
+  background: url(../images/sol.jpg) no-repeat right $bg;
+  background-size: auto 100%;
+  float: left;
+}
