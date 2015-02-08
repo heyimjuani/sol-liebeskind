@@ -72,6 +72,7 @@ $(document).ready(function() {
       $("#sc-link").attr("href", scLink);
     });
     $("#sc-play").addClass("playing");
+    $("#tracklist li.playing").removeClass("paused");
   });
   scWidget.bind(SC.Widget.Events.PLAY_PROGRESS, function(progress){
     progressPercent = progress.relativePosition * 100;
@@ -88,5 +89,6 @@ $(document).ready(function() {
   });
   scWidget.bind(SC.Widget.Events.PAUSE, function(e){
     $("#sc-play").removeClass("playing");
+    $("#tracklist li.playing").addClass("paused");
   });
 });

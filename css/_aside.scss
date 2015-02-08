@@ -22,6 +22,7 @@ aside {
     line-height: 1.2em;
     padding: 30px 0;
     border-bottom: 1px dotted lighten($body, 60%);
+    position: relative;
 
     &:last-of-type { border: none; }
 
@@ -29,6 +30,18 @@ aside {
       cursor: pointer;
       strong { color: $accent; }
     }
+
+    &.playing:before {
+      content: "";
+      width: 240px;
+      height: 34px;
+      position: absolute;
+      bottom: 0;
+      right: 4px;
+      background: url(../images/waves.gif) no-repeat bottom right;
+      opacity: .3;
+    }
+    &.playing.paused:before { display: none; }
 
     strong {
       display: block;
