@@ -11,7 +11,7 @@ aside {
   padding-bottom: 90px;
 
   ul {
-    padding-left: 40px;
+    padding: 0 11px 0 40px;
     position: relative;
     height: 100%;
     overflow: hidden;
@@ -21,11 +21,11 @@ aside {
     list-style: none;
     line-height: 1.2em;
     padding: 30px 0;
-    border-bottom: 2px dotted lighten($body, 60%);
+    border-bottom: 1px dotted lighten($body, 60%);
 
     &:last-of-type { border: none; }
 
-    &:hover {
+    &:hover, &.playing {
       cursor: pointer;
       strong { color: $accent; }
     }
@@ -43,7 +43,7 @@ aside {
   }
 }
 
-#sc-link {
+#sc-profile {
   position: absolute;
   bottom: 0;
   right: 0;
