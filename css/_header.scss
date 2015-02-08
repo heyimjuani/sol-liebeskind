@@ -1,5 +1,6 @@
 header {
   position: fixed;
+  z-index: 10;
   height: 50px;
   background: #fff;
   width: 100%;
@@ -7,6 +8,15 @@ header {
   left: 0;
   @include display-flex;
   @include flex-props(row nowrap, space-between, center, center);
+
+  h1 {
+    font-size: .93em;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: normal;
+    padding: 0 10px;
+    display: none;
+  }
 
   nav {
     height: 50px;

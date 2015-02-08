@@ -1,3 +1,62 @@
-@media (max-width: 780px) {
- /* do stuff */
+@media (max-width: 960px) {
+ body {
+  padding: 0;
+ }
+ #player { display: none }
+ #controls {
+  position: fixed;
+  top: 0;
+  right: 0;
+ }
+ aside { padding-top: 50px; }
+ #tracks ul { padding-left: 11px; text-align: center; }
+ #tracks li.playing:before { 
+  width: 100%; 
+  background-position: center bottom;
+  right: 0;
+ }
+ #sc-profile { width: 340px; }
+
+ #hero {
+  height: 100%;
+  background-position: center;
+  article {
+    display: none;
+  }
+ }
+
+ header {
+  background: $body;
+  width: auto;
+
+  h1 { display: block; padding: 0 20px; }
+  nav {
+    width: auto;
+    padding-right: 20px;
+    ul a {
+      width: auto;
+      padding: 0 15px;
+    }
+  }
+ }
+}
+@media (max-width: 670px) {
+ #controls,
+ aside { display: none; }
+
+ header { width: 100%; }
+
+ #hero,
+ #sc-profile {
+  width: 100%;
+ }
+
+ #sc-profile {
+  width: auto;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  height: 62px;
+  line-height: 62px;
+ }
 }
