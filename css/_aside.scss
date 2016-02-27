@@ -15,6 +15,18 @@ aside {
     position: relative;
     height: 100%;
     overflow: hidden;
+
+    &:empty:before {
+      content: "Loading songs...";
+      text-transform: uppercase;
+      opacity: .3;
+      position: absolute;
+      display: block;
+      width: 100%;
+      text-indent: 40px;
+      top: 50%;
+      left: 0;
+    }
   }
 
   li {

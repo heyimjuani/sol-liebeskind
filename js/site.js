@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	$("#tracks ul").perfectScrollbar({
+/*	$("#tracks ul").perfectScrollbar({
     suppressScrollX: true
-  });
+  });*/
 
   var scEmbed = document.getElementById("sc-embed");
   var scWidget = SC.Widget(scEmbed);
